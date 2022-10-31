@@ -36,14 +36,14 @@ pipeline {
          steps {
             sh """
                pytest ./tests/test_sample.py
-            """)
+            """
          }
       }
       stage('Stop test app') {
          steps {
             sh """
                docker-compose down
-            """)
+            """
          }
       }
       // stage('Container Scanning') {
